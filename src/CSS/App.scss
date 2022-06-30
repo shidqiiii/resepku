@@ -31,6 +31,8 @@ $yellow: #ff9f29;
 }
 
 .carousel {
+  cursor: pointer;
+
   .carousel-indicators {
     button {
       width: 10px;
@@ -40,6 +42,10 @@ $yellow: #ff9f29;
   }
 
   .carousel-inner {
+    :hover {
+      opacity: 0.95;
+    }
+
     .carousel-item {
       img {
         max-height: 400px;
