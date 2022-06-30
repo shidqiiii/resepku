@@ -9,6 +9,7 @@ $yellow: #ff9f29;
       text-transform: uppercase;
       font-weight: bold;
       color: $green;
+      font-size: 25px;
 
       span {
         color: $yellow;
@@ -22,8 +23,44 @@ $yellow: #ff9f29;
 
     .signup {
       background-color: $green;
-      border-radius: 25px;
-      padding: 10px 30px;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 20px;
+    }
+  }
+}
+
+.carousel {
+  .carousel-indicators {
+    button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+  }
+
+  .carousel-inner {
+    .carousel-item {
+      img {
+        max-height: 400px;
+        object-fit: cover;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+      }
+
+      .carousel-caption {
+        z-index: 2;
+      }
     }
   }
 }
