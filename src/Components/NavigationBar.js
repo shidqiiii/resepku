@@ -3,8 +3,8 @@ import { Navbar, Container, Nav, Button } from 'react-bootstrap'
 
 export default function NavigationBar() {
     return (
-        <Navbar expand="lg" className='shadow py-3' fixed="top" bg='light'>
-            <Container Container >
+        <Navbar expand="lg" className='shadow py-2' sticky="top" bg='light'>
+            <Container >
                 <Navbar.Brand href="#home">Resep<span>ku</span></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
