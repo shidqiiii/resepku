@@ -1,0 +1,29 @@
+$peach: #faf3e3;
+$black: #000000;
+$green: #1a4d2e;
+$yellow: #ff9f29;
+
+.navbar {
+  .container {
+    .navbar-brand {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $green;
+
+      span {
+        color: $yellow;
+      }
+    }
+
+    .login {
+      border: none;
+      color: $green;
+    }
+
+    .signup {
+      background-color: $green;
+      border-radius: 25px;
+      padding: 10px 30px;
+    }
+  }
+}
