@@ -1,7 +1,7 @@
 .navbar .container .navbar-brand {
   text-transform: uppercase;
   font-weight: bold;
-  color: #1a4d2e;
+  color: rgb(26, 77, 46);
   font-size: 25px;
 }
 .navbar .container .navbar-brand span {
@@ -9,13 +9,20 @@
 }
 .navbar .container .login {
   border: none;
-  color: #1a4d2e;
+  color: rgb(26, 77, 46);
+  border-radius: 30px;
+  padding: 10px 20px;
 }
 .navbar .container .signup {
-  background-color: #1a4d2e;
+  background-color: rgb(26, 77, 46);
   border: none;
   border-radius: 30px;
   padding: 10px 20px;
+}
+.navbar .container .signup:active, .navbar .container .signup:focus {
+  background-color: rgb(26, 77, 46);
+  border-color: rgb(26, 77, 46);
+  box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.5);
 }
 
 .carousel {
@@ -50,8 +57,29 @@
   color: #faf3e3;
 }
 
+.categories-title {
+  border: none !important;
+}
+.categories-title button {
+  border-radius: 40px;
+  background-color: rgb(26, 77, 46);
+  border-color: rgb(26, 77, 46);
+  color: white;
+  padding: 0.5rem 1.5rem;
+}
+.categories-title button:hover {
+  border-color: rgb(26, 77, 46);
+  background-color: rgb(26, 77, 46);
+}
+.categories-title button:active, .categories-title button:focus {
+  background-color: rgb(26, 77, 46);
+  border-color: rgb(26, 77, 46);
+  box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.5);
+}
+
 .categories-card .card {
   cursor: pointer;
+  border-radius: 50% !important;
 }
 .categories-card .card :hover {
   opacity: 0.95;
@@ -79,4 +107,34 @@
   background: rgba(0, 0, 0, 0.6);
   border-radius: 0.25rem;
   z-index: 1;
+}
+
+.header {
+  border: none !important;
+}
+.header .card-img {
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .card-img-overlay form input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+.header .card-img-overlay form .form-control {
+  max-width: 300px;
+  border-radius: 0.25rem 0 0 0.25rem;
+  padding: 0.55rem 1rem;
+}
+.header .card-img-overlay form .form-control:focus {
+  border-color: rgb(26, 77, 46);
+  box-shadow: none;
+}
+.header .card-img-overlay form button {
+  background-color: rgb(26, 77, 46);
+  border: rgb(26, 77, 46);
+  padding: 0 1rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+.header .card-img-overlay form button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.5);
 }/*# sourceMappingURL=App.css.map */
