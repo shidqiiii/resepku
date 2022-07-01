@@ -33,6 +33,10 @@ $yellow: #ff9f29;
 .carousel {
   cursor: pointer;
 
+  :hover {
+    opacity: 0.95;
+  }
+
   .carousel-indicators {
     button {
       width: 10px;
@@ -42,10 +46,6 @@ $yellow: #ff9f29;
   }
 
   .carousel-inner {
-    :hover {
-      opacity: 0.95;
-    }
-
     .carousel-item {
       img {
         max-height: 400px;
@@ -66,6 +66,45 @@ $yellow: #ff9f29;
 
       .carousel-caption {
         z-index: 2;
+        color: $peach;
+      }
+    }
+  }
+}
+
+.categories-card {
+  .card {
+    cursor: pointer;
+
+    :hover {
+      opacity: 0.95;
+    }
+
+    .card-img {
+      max-height: 170px;
+      object-fit: cover;
+    }
+
+    .card-img-overlay {
+      .card-title {
+        color: $peach;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+        z-index: 2;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 0.25rem;
+        z-index: 1;
       }
     }
   }

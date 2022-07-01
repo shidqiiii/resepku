@@ -21,13 +21,13 @@
 .carousel {
   cursor: pointer;
 }
+.carousel :hover {
+  opacity: 0.95;
+}
 .carousel .carousel-indicators button {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-}
-.carousel .carousel-inner :hover {
-  opacity: 0.95;
 }
 .carousel .carousel-inner .carousel-item img {
   max-height: 400px;
@@ -47,4 +47,36 @@
 }
 .carousel .carousel-inner .carousel-item .carousel-caption {
   z-index: 2;
+  color: #faf3e3;
+}
+
+.categories-card .card {
+  cursor: pointer;
+}
+.categories-card .card :hover {
+  opacity: 0.95;
+}
+.categories-card .card .card-img {
+  max-height: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.categories-card .card .card-img-overlay .card-title {
+  color: #faf3e3;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  z-index: 2;
+}
+.categories-card .card .card-img-overlay:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.25rem;
+  z-index: 1;
 }/*# sourceMappingURL=App.css.map */
