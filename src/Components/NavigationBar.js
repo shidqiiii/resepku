@@ -9,13 +9,13 @@ export default function NavigationBar() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#">Home</Nav.Link>
-                        <Nav.Link href="#">Categories</Nav.Link>
-                        <Nav.Link href="#">Products</Nav.Link>
+                        <Nav.Link href="#" className='active'>Home</Nav.Link>
+                        <Nav.Link href="#">Kategori</Nav.Link>
+                        <Nav.Link href="#">Artikel</Nav.Link>
                     </Nav>
                     <Nav className="ms-auto">
-                        <Button variant='light' className='mx-2 login'>Login</Button>
-                        <Button className='mx-2 signup'>Sign Up</Button>
+                        <Button variant='light' className='mx-1 login'>Masuk</Button>
+                        <Button className='mx-1 signup'>Daftar</Button>
                     </Nav>
                 </Navbar.Collapse>
             </Container >
