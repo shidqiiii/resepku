@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 import { BaseApi } from '../Api/BaseApi';
-import { IoFastFood, IoTime, IoCellular } from 'react-icons/io5';
+import { IoFastFood, IoTime, IoCellular, IoLogoInstagram, IoLogoFacebook, IoLogoTwitter } from 'react-icons/io5';
 
 
 export default function Home() {
@@ -38,7 +38,6 @@ export default function Home() {
 
     return (
         <>
-            {console.log(detailRecipe)}
             <Card className='header'>
                 <Card.Img src="./images/header.png" alt="Card image" />
                 <Card.ImgOverlay className='d-flex align-items-center justify-content-center text-center'>
@@ -103,7 +102,7 @@ export default function Home() {
                 {/* Recipe Highlight */}
                 {detailRecipe.length !== 0 ? (<Card className='highlight-recipe-component'>
                     <Row className="m-2 g-0">
-                        <Col md={5} className='d-flex align-items-center'>
+                        <Col md={4} className='d-flex align-items-center'>
                             <Card.Img src={detailRecipe.thumb} className="img-fluid rounded-start" alt="foto makanan" />
                         </Col>
                         <Col className='d-flex align-items-center ms-3'>
@@ -122,7 +121,8 @@ export default function Home() {
                 {/* newsletter */}
                 <Card className="text-center my-5 newsletter">
                     <Card.Body>
-                        <Card.Title className='my-3 mx-3'>Bergabunglah dengan Buletin Kami <br /> Terima Update Resep & Artikel Masakan Terbaru</Card.Title>
+                        <Card.Title className='mt-3 mb-0'>Bergabunglah dengan Buletin Kami</Card.Title>
+                        <Card.Text className='mb-4'>Terima Update Resep & Artikel Masakan Terbaru</Card.Text>
                         <Form className="d-flex justify-content-center mb-4 mx-3">
                             <Form.Control
                                 type="email"
@@ -132,6 +132,20 @@ export default function Home() {
                         </Form>
                     </Card.Body>
                 </Card>
+
+                {/* Footer */}
+                <div className="footer pb-3">
+                    <hr />
+                    <div className='d-flex justify-content-between align-items-center'>
+                        <Card.Text className='m-0'>&copy; Arunika | All Rights Reserved</Card.Text>
+                        <div>
+                            <IoLogoInstagram className='me-1' />
+                            <IoLogoFacebook className='mx-1' />
+                            <IoLogoTwitter className='ms-1' />
+                        </div>
+                    </div>
+                </div>
+
             </Container>
         </>
     )
