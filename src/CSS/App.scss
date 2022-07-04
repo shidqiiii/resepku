@@ -39,48 +39,6 @@ $yellow: #ff9f29;
   }
 }
 
-.carousel {
-  cursor: pointer;
-
-  :hover {
-    opacity: 0.95;
-  }
-
-  .carousel-indicators {
-    button {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
-  }
-
-  .carousel-inner {
-    .carousel-item {
-      img {
-        max-height: 400px;
-        object-fit: cover;
-      }
-
-      &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.6);
-        z-index: 1;
-      }
-
-      .carousel-caption {
-        z-index: 2;
-        color: $peach;
-      }
-    }
-  }
-}
-
 .categories-title {
   border: none !important;
 
@@ -106,9 +64,19 @@ $yellow: #ff9f29;
 }
 
 .categories-card {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 6px;
+
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
   .card {
     cursor: pointer;
-    border-radius: 50% !important;
+    width: 350px;
+    flex: 0 0 auto;
 
     :hover {
       opacity: 0.95;
@@ -179,6 +147,22 @@ $yellow: #ff9f29;
           box-shadow: 0 0 0 0.25rem rgb(26 77 46/ 50%);
         }
       }
+    }
+  }
+}
+
+.highlight-recipe-card {
+  .card-body {
+    .card-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+    }
+
+    .card-text {
+      text-align: center;
+      font-size: 14px;
     }
   }
 }

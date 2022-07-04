@@ -49,45 +49,38 @@ export default function Home() {
             </Card>
 
             <Container className='mt-5'>
-                {/* Carousel */}
-                {/* <Carousel>
-                {higlightRecipe.map((item) => {
-                    return (
-                        <Carousel.Item interval={2000} key={item.key}
-                            onClick={() => {
-                                console.log(item.key);
-                            }}>
-                            <img
-                                className="d-block w-100"
-                                src={item.thumb}
-                                alt="First slide"
-                            />
-                            <Carousel.Caption>
-                                <h3>{item.title}</h3>
-                                <div className='d-flex justify-content-center'>
-                                    <p className='mx-2'><IoTime /> {item.times}</p>
-                                    <p className='mx-2'><IoFastFood /> {item.portion}</p>
-                                    <p className='mx-2'><IoCellular /> {item.dificulty}</p>
-                                </div>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    )
-                })}
-            </Carousel> */}
 
-                {/* Categories Card */}
+                {/* All Categories */}
+                <Card.Title className='fw-bolder fs-4 my-4'>Berdasarkan Kategori</Card.Title>
+                <div className="mb-5 categories-card">
+                    {allCategories.map((item) => (
+                        <Card className="text-center mb-2">
+                            <Card.Img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+                            <Card.ImgOverlay className='d-flex justify-content-center align-items-center'>
+                                <Card.Title>{item.category}</Card.Title>
+                            </Card.ImgOverlay>
+                        </Card>
+                    ))}
+                </div>
+
+                {/* New Recipes */}
                 <Card className='categories-title flex-row justify-content-between align-items-center my-4'>
-                    <Card.Title className='fw-bolder fs-4'>Berdasarkan Kategori</Card.Title>
+                    <Card.Title className='fw-bolder fs-4'>Cobain Resep Terbaru</Card.Title>
                     <Button>Lihat Semua</Button>
                 </Card>
-                <Row xs={1} sm={2} md={3} className="g-4 mb-5 categories-card">
-                    {allCategories.slice(0, 6).map((item) => (
+
+                <Row xs={1} sm={2} md={4} className="g-4 mb-5">
+                    {higlightRecipe.map((item) => (
                         <Col>
-                            <Card className="text-center">
-                                <Card.Img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
-                                <Card.ImgOverlay className='d-flex justify-content-center align-items-center'>
-                                    <Card.Title>{item.category}</Card.Title>
-                                </Card.ImgOverlay>
+                            <Card className='highlight-recipe-card'>
+                                <Card.Img variant="top" src={item.thumb} />
+                                <Card.Body>
+                                    <Card.Title>{item.title}</Card.Title>
+                                    <Card.Text className='mt-auto'>
+                                        <IoTime /> {item.times} <IoFastFood /> {item.portion}
+                                    </Card.Text>
+                                    <Card.Text><IoCellular /> {item.dificulty}</Card.Text>
+                                </Card.Body>
                             </Card>
                         </Col>
                     ))}
