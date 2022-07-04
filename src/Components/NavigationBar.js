@@ -9,9 +9,10 @@ export default function NavigationBar() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#" className='active'>Home</Nav.Link>
                         <Nav.Link href="#">Kategori</Nav.Link>
                         <Nav.Link href="#">Artikel</Nav.Link>
+                        <Nav.Link href="#">Produk</Nav.Link>
+                        <Nav.Link href="#">Favorit</Nav.Link>
                     </Nav>
                     <Nav className="ms-auto">
                         <Button variant='light' className='mx-1 login'>Masuk</Button>
