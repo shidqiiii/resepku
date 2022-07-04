@@ -25,68 +25,6 @@
   box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.5);
 }
 
-.categories-title {
-  border: none !important;
-}
-.categories-title button {
-  border-radius: 40px;
-  background-color: rgb(26, 77, 46);
-  border-color: rgb(26, 77, 46);
-  color: white;
-  padding: 0.5rem 1.5rem;
-}
-.categories-title button:hover {
-  border-color: rgb(26, 77, 46);
-  background-color: rgb(26, 77, 46);
-}
-.categories-title button:active, .categories-title button:focus {
-  background-color: rgb(26, 77, 46);
-  border-color: rgb(26, 77, 46);
-  box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.5);
-}
-
-.categories-card {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 6px;
-}
-.categories-card ::-webkit-scrollbar {
-  width: 0;
-}
-.categories-card .card {
-  cursor: pointer;
-  width: 350px;
-  flex: 0 0 auto;
-}
-.categories-card .card :hover {
-  opacity: 0.95;
-}
-.categories-card .card .card-img {
-  max-height: 170px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.categories-card .card .card-img-overlay .card-title {
-  color: #faf3e3;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 20px;
-  z-index: 2;
-}
-.categories-card .card .card-img-overlay:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 0.25rem;
-  z-index: 1;
-}
-
 .header {
   border: none !important;
 }
@@ -117,13 +55,159 @@
   box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.5);
 }
 
-.highlight-recipe-card .card-body .card-title {
+.categories-component .categories-title {
+  border: none !important;
+}
+.categories-component .categories-title button {
+  border-radius: 40px;
+  background-color: rgb(26, 77, 46);
+  border-color: rgb(26, 77, 46);
+  color: white;
+  padding: 0.5rem 1.5rem;
+}
+.categories-component .categories-title button:hover {
+  border-color: rgb(26, 77, 46);
+  background-color: rgb(26, 77, 46);
+}
+.categories-component .categories-title button:active, .categories-component .categories-title button:focus {
+  background-color: rgb(26, 77, 46);
+  border-color: rgb(26, 77, 46);
+  box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.5);
+}
+.categories-component .categories-card {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 6px;
+}
+.categories-component .categories-card ::-webkit-scrollbar {
+  width: 0;
+}
+.categories-component .categories-card .card {
+  cursor: pointer;
+  width: 350px;
+  flex: 0 0 auto;
+}
+.categories-component .categories-card .card :hover {
+  opacity: 0.95;
+}
+.categories-component .categories-card .card .card-img {
+  max-height: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.categories-component .categories-card .card .card-img-overlay .card-title {
+  color: #faf3e3;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  z-index: 2;
+}
+.categories-component .categories-card .card .card-img-overlay:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.25rem;
+  z-index: 1;
+}
+
+.new-recipe-component .categories-title {
+  border: none !important;
+}
+.new-recipe-component .categories-title button {
+  border-radius: 40px;
+  background-color: rgb(26, 77, 46);
+  border-color: rgb(26, 77, 46);
+  color: white;
+  padding: 0.5rem 1.5rem;
+}
+.new-recipe-component .categories-title button:hover {
+  border-color: rgb(26, 77, 46);
+  background-color: rgb(26, 77, 46);
+}
+.new-recipe-component .categories-title button:active, .new-recipe-component .categories-title button:focus {
+  background-color: rgb(26, 77, 46);
+  border-color: rgb(26, 77, 46);
+  box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.5);
+}
+.new-recipe-component .new-recipe-card {
+  cursor: pointer;
+}
+.new-recipe-component .new-recipe-card .card-body .card-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
 }
-.highlight-recipe-card .card-body .card-text {
+.new-recipe-component .new-recipe-card .card-body .card-text {
   text-align: center;
   font-size: 14px;
+}
+
+.highlight-recipe-component {
+  border: none !important;
+}
+.highlight-recipe-component .highlight-recipe-card {
+  border: none;
+}
+.highlight-recipe-component .highlight-recipe-card .card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.highlight-recipe-component .highlight-recipe-card button {
+  border-radius: 5px;
+  background-color: rgb(26, 77, 46);
+  border-color: rgb(26, 77, 46);
+  color: white;
+  padding: 0.5rem 1.5rem;
+}
+.highlight-recipe-component .highlight-recipe-card button:hover {
+  border-color: rgb(26, 77, 46);
+  background-color: rgb(26, 77, 46);
+}
+.highlight-recipe-component .highlight-recipe-card button:active, .highlight-recipe-component .highlight-recipe-card button:focus {
+  background-color: rgb(26, 77, 46);
+  border-color: rgb(26, 77, 46);
+  box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.5);
+}
+
+.newsletter {
+  border-radius: 10px !important;
+}
+.newsletter .card-body {
+  background-color: rgb(26, 77, 46);
+  color: #faf3e3;
+  border-radius: 10px;
+}
+.newsletter .card-body .card-title {
+  line-height: 2.5rem;
+}
+.newsletter .card-body form input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+.newsletter .card-body form .form-control {
+  max-width: 300px;
+  border-radius: 0.25rem 0 0 0.25rem;
+  padding: 0.55rem 1rem;
+}
+.newsletter .card-body form .form-control:focus {
+  border-color: #ff9f29;
+  box-shadow: none;
+}
+.newsletter .card-body form button {
+  background-color: #ff9f29;
+  border: #ff9f29;
+  padding: 0 1rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+.newsletter .card-body form button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 159, 41, 0.5);
 }/*# sourceMappingURL=App.css.map */
