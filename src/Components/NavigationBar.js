@@ -1,18 +1,35 @@
-import React from 'react'
-import { Navbar, Container, Nav, Button } from 'react-bootstrap'
+import React, { useContext } from 'react'
+import { Navbar, Container, Nav, Button, NavDropdown } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import { CategoriesContext } from '../Context/Context';
 
-export default function NavigationBar() {
+export default function NavigationBar(props) {
+    const categories = useContext(CategoriesContext);
+
+    const getRecipePerCategories = (key, category) => {
+        props.getRecipePerCategories(key, category)
+    }
+
     return (
         <Navbar expand="lg" className='shadow py-2' sticky="top" bg='light'>
             <Container >
-                <Navbar.Brand href="#home">Resep<span>ku</span></Navbar.Brand>
+                <Navbar.Brand as={Link} to="/">Resep<span>ku</span></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#">Kategori</Nav.Link>
-                        <Nav.Link href="#">Artikel</Nav.Link>
-                        <Nav.Link href="#">Produk</Nav.Link>
-                        <Nav.Link href="#">Favorit</Nav.Link>
+                        <NavDropdown title="Kategori" id="basic-nav-dropdown">
+                            {categories.map((item => (
+                                <NavDropdown.Item
+                                    as={Link}
+                                    to={`/kategori/${item.key}`}
+                                    key={item.key}
+                                    onClick={() => getRecipePerCategories(item.key, item.category)}
+                                >{item.category}</NavDropdown.Item>
+                            )))}
+                        </NavDropdown>
+                        <Nav.Link as={Link} to="/artikel">Artikel</Nav.Link>
+                        <Nav.Link as={Link} to="#">Produk</Nav.Link>
+                        <Nav.Link as={Link} to="#">Favorit</Nav.Link>
                     </Nav>
                     <Nav className="ms-auto">
                         <Button variant='light' className='mx-1 login'>Masuk</Button>
@@ -20,6 +37,6 @@ export default function NavigationBar() {
                     </Nav>
                 </Navbar.Collapse>
             </Container >
-        </Navbar>
+        </Navbar >
     )
 }

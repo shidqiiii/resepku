@@ -1,17 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 import { BaseApi } from '../Api/BaseApi';
-import { IoFastFood, IoTime, IoCellular, IoLogoInstagram, IoLogoFacebook, IoLogoTwitter } from 'react-icons/io5';
-
+import { IoFastFood, IoTime, IoCellular } from 'react-icons/io5';
+import { CategoriesContext } from '../Context/Context';
 
 export default function Home() {
-    const getAllCategories = async () => {
-        const data = await BaseApi.allCategoriesRecipe();
-        if (data.status === true) {
-            setAllCategories(data.results)
-        }
-    };
-
     const getHiglightRecipe = async () => {
         const data = await BaseApi.higlightRecipe();
         if (data.status === true) {
@@ -26,15 +19,15 @@ export default function Home() {
         }
     };
 
-    const [allCategories, setAllCategories] = useState([]);
     const [higlightRecipe, setHiglightRecipe] = useState([]);
     const [detailRecipe, setDetailRecipe] = useState([]);
 
     useEffect(() => {
         getHiglightRecipe()
-        getAllCategories()
         getRecipeRotiGoreng()
     }, []);
+
+    const categories = useContext(CategoriesContext);
 
     return (
         <>
@@ -63,7 +56,7 @@ export default function Home() {
                 <div className="categories-component">
                     <Card.Title className='fw-bolder fs-4 my-4'>Berdasarkan Kategori</Card.Title>
                     <div className="mb-5 categories-card">
-                        {allCategories.map((item) => (
+                        {categories.map((item) => (
                             <Card className="text-center mb-2" key={item.key}>
                                 <Card.Img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
                                 <Card.ImgOverlay className='d-flex justify-content-center align-items-center'>
@@ -132,19 +125,6 @@ export default function Home() {
                         </Form>
                     </Card.Body>
                 </Card>
-
-                {/* Footer */}
-                <div className="footer pb-3">
-                    <hr />
-                    <div className='d-flex justify-content-between align-items-center'>
-                        <Card.Text className='m-0'>&copy; Arunika | All Rights Reserved</Card.Text>
-                        <div>
-                            <IoLogoInstagram className='me-1' />
-                            <IoLogoFacebook className='mx-1' />
-                            <IoLogoTwitter className='ms-1' />
-                        </div>
-                    </div>
-                </div>
 
             </Container>
         </>
