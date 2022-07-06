@@ -3,6 +3,7 @@ import { Card, Container, Row, Col, Spinner } from 'react-bootstrap';
 import { IoCellular, IoFastFood, IoTime } from 'react-icons/io5';
 import { useParams } from 'react-router-dom';
 import { BaseApi } from '../Api/BaseApi';
+import Loading from '../Components/Loading';
 import { categoriesContext } from '../Context/categoriesContext';
 
 const RecipePerCategory = () => {
@@ -24,7 +25,7 @@ const RecipePerCategory = () => {
     const [recipePerCategories, setrecipePerCategories] = useState([]);
 
     useEffect(() => {
-        getRecipePerCategories(`${key}`);
+        getRecipePerCategories(key);
     }, []);
 
 
@@ -65,11 +66,7 @@ const RecipePerCategory = () => {
                 )
                 :
                 (
-                    <div className='d-flex my-5 justify-content-center'>
-                        <Spinner animation="border" role="status">
-                            <span className="visually-hidden">Loading...</span>
-                        </Spinner>
-                    </div>
+                    <Loading />
                 )
             }
 
