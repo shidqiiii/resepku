@@ -8,6 +8,7 @@ import Home from './Pages/Home';
 import NotFound from './Pages/NotFound';
 import RecipePerCategory from './Pages/RecipePerCategory';
 import { categoriesContext } from "./Context/categoriesContext";
+import RecipeDetail from './Pages/RecipeDetail';
 
 function App() {
   const getAllCategories = async () => {
@@ -31,6 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/kategori/:key" element={<RecipePerCategory />} />
+          <Route path="/resep/:key" element={<RecipeDetail />} />
           <Route path="*" element={<NotFound replace to="/404" />} />
         </Routes>
       </Router>

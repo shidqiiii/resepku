@@ -4,6 +4,7 @@ import { BaseApi } from '../Api/BaseApi';
 import { IoFastFood, IoTime, IoCellular } from 'react-icons/io5';
 import { categoriesContext } from '../Context/categoriesContext';
 import Loading from '../Components/Loading';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
     const allCategories = useContext(categoriesContext);
@@ -15,8 +16,8 @@ export default function Home() {
         }
     };
 
-    const getRecipeRotiGoreng = async () => {
-        const data = await BaseApi.detailRecipe("resep-roti-goreng-isi-tempe-lada-hitam");
+    const getRecipeRotiGoreng = async (key) => {
+        const data = await BaseApi.detailRecipe(key);
         if (data.status === true) {
             setDetailRecipe(data.results)
         }
@@ -27,8 +28,14 @@ export default function Home() {
 
     useEffect(() => {
         getHiglightRecipe()
-        getRecipeRotiGoreng()
+        getRecipeRotiGoreng("resep-roti-goreng-isi-tempe-lada-hitam")
     }, []);
+
+    const navigate = useNavigate();
+    const navigateToRecipeDetail = (key) => {
+        navigate(`/resep/${key}`);
+    };
+
 
     return (
         <>
@@ -82,7 +89,8 @@ export default function Home() {
                                 <Row xs={1} sm={2} md={4} className="g-4 mb-5">
                                     {higlightRecipe.map((item) => (
                                         <Col key={item.key}>
-                                            <Card className='new-recipe-card'>
+                                            <Card className='new-recipe-card'
+                                                onClick={() => navigateToRecipeDetail(item.key)}>
                                                 <Card.Img variant="top" src={item.thumb} />
                                                 <Card.Body>
                                                     <Card.Title>{item.title}</Card.Title>
@@ -109,7 +117,7 @@ export default function Home() {
                                                 <Card.Title className='fw-bolder fs-5'>{detailRecipe.title}</Card.Title>
                                                 <Card.Text className='my-1'><small>{detailRecipe.author.datePublished} oleh {detailRecipe.author.user}</small></Card.Text>
                                                 <Card.Text>{detailRecipe.desc}</Card.Text>
-                                                <Button>Cek Detail</Button>
+                                                <Button onClick={() => navigateToRecipeDetail("resep-roti-goreng-isi-tempe-lada-hitam")}>Cek Detail</Button>
                                             </Card.Body>
                                         </Card>
                                     </Col>

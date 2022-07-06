@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Card, Container, Row, Col, Spinner } from 'react-bootstrap';
+import { Card, Container, Row, Col } from 'react-bootstrap';
 import { IoCellular, IoFastFood, IoTime } from 'react-icons/io5';
 import { useParams } from 'react-router-dom';
 import { BaseApi } from '../Api/BaseApi';

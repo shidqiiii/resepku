@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Navbar, Container, Nav, Button, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { categoriesContext } from '../Context/categoriesContext';
+import Loading from './Loading';
 
 export default function NavigationBar() {
     const allCategories = useContext(categoriesContext);
@@ -14,12 +15,16 @@ export default function NavigationBar() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <NavDropdown title="Kategori" id="basic-nav-dropdown">
-                            {allCategories.map((item => (
-                                <NavDropdown.Item
-                                    href={`/kategori/${item.key}`}
-                                    key={item.key}
-                                >{item.category}</NavDropdown.Item>
-                            )))}
+                            {allCategories.length !== 0 ?
+                                (allCategories.map((item => (
+                                    <NavDropdown.Item
+                                        href={`/kategori/${item.key}`}
+                                        key={item.key}
+                                    >{item.category}</NavDropdown.Item>
+                                ))))
+                                :
+                                (<Loading />)
+                            }
                         </NavDropdown>
                         <Nav.Link as={Link} to="/artikel">Artikel</Nav.Link>
                         <Nav.Link as={Link} to="#">Produk</Nav.Link>
