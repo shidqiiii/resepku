@@ -33,7 +33,7 @@ export default function Home() {
     return (
         <>
             {
-                allCategories.length !== 0 && higlightRecipe.length !== 0 ?
+                allCategories.length !== 0 && higlightRecipe.length !== 0 && detailRecipe.length !== 0 ?
                     (<>
                         <Card className='header'>
                             <Card.Img src="./images/header.png" alt="Card image" />
@@ -98,7 +98,7 @@ export default function Home() {
                             </div>
 
                             {/* Recipe Highlight */}
-                            {detailRecipe.length !== 0 ? (<Card className='highlight-recipe-component'>
+                            <Card className='highlight-recipe-component'>
                                 <Row className="m-2 g-0">
                                     <Col md={4} className='d-flex align-items-center'>
                                         <Card.Img src={detailRecipe.thumb} className="img-fluid rounded-start" alt="foto makanan" />
@@ -114,7 +114,7 @@ export default function Home() {
                                         </Card>
                                     </Col>
                                 </Row>
-                            </Card>) : ("")}
+                            </Card>
 
                             {/* newsletter */}
                             <Card className="text-center my-5 newsletter">
