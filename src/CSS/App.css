@@ -1,7 +1,7 @@
 .navbar .container .navbar-brand {
   text-transform: uppercase;
   font-weight: bold;
-  color: rgb(26, 77, 46);
+  color: #1a4d2e;
   font-size: 25px;
 }
 .navbar .container .navbar-brand span {
@@ -9,19 +9,19 @@
 }
 .navbar .container .login {
   border: none;
-  color: rgb(26, 77, 46);
+  color: #1a4d2e;
   border-radius: 30px;
   padding: 10px 20px;
 }
 .navbar .container .signup {
-  background-color: rgb(26, 77, 46);
+  background-color: #1a4d2e;
   border: none;
   border-radius: 30px;
   padding: 10px 20px;
 }
 .navbar .container .signup:active, .navbar .container .signup:focus {
-  background-color: rgb(26, 77, 46);
-  border-color: rgb(26, 77, 46);
+  background-color: #1a4d2e;
+  border-color: #1a4d2e;
   box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.5);
 }
 
@@ -42,12 +42,12 @@
   padding: 0.55rem 1rem;
 }
 .header .card-img-overlay form .form-control:focus {
-  border-color: rgb(26, 77, 46);
+  border-color: #1a4d2e;
   box-shadow: none;
 }
 .header .card-img-overlay form button {
-  background-color: rgb(26, 77, 46);
-  border: rgb(26, 77, 46);
+  background-color: #1a4d2e;
+  border: #1a4d2e;
   padding: 0 1rem;
   border-radius: 0 0.25rem 0.25rem 0;
 }
@@ -60,18 +60,18 @@
 }
 .categories-component .categories-title button {
   border-radius: 40px;
-  background-color: rgb(26, 77, 46);
-  border-color: rgb(26, 77, 46);
+  background-color: #1a4d2e;
+  border-color: #1a4d2e;
   color: white;
   padding: 0.5rem 1.5rem;
 }
 .categories-component .categories-title button:hover {
-  border-color: rgb(26, 77, 46);
-  background-color: rgb(26, 77, 46);
+  border-color: #1a4d2e;
+  background-color: #1a4d2e;
 }
 .categories-component .categories-title button:active, .categories-component .categories-title button:focus {
-  background-color: rgb(26, 77, 46);
-  border-color: rgb(26, 77, 46);
+  background-color: #1a4d2e;
+  border-color: #1a4d2e;
   box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.5);
 }
 .categories-component .categories-card {
@@ -90,7 +90,7 @@
   border-radius: 10px;
 }
 .categories-component .categories-card::-webkit-scrollbar-thumb {
-  background-color: rgb(26, 77, 46);
+  background-color: #1a4d2e;
   border-radius: 10px;
 }
 .categories-component .categories-card .card {
@@ -131,18 +131,18 @@
 }
 .new-recipe-component .categories-title button {
   border-radius: 40px;
-  background-color: rgb(26, 77, 46);
-  border-color: rgb(26, 77, 46);
+  background-color: #1a4d2e;
+  border-color: #1a4d2e;
   color: white;
   padding: 0.5rem 1.5rem;
 }
 .new-recipe-component .categories-title button:hover {
-  border-color: rgb(26, 77, 46);
-  background-color: rgb(26, 77, 46);
+  border-color: #1a4d2e;
+  background-color: #1a4d2e;
 }
 .new-recipe-component .categories-title button:active, .new-recipe-component .categories-title button:focus {
-  background-color: rgb(26, 77, 46);
-  border-color: rgb(26, 77, 46);
+  background-color: #1a4d2e;
+  border-color: #1a4d2e;
   box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.5);
 }
 .new-recipe-component .new-recipe-card {
@@ -181,18 +181,18 @@
 }
 .highlight-recipe-component .highlight-recipe-card button {
   border-radius: 5px;
-  background-color: rgb(26, 77, 46);
-  border-color: rgb(26, 77, 46);
+  background-color: #1a4d2e;
+  border-color: #1a4d2e;
   color: white;
   padding: 0.5rem 1.5rem;
 }
 .highlight-recipe-component .highlight-recipe-card button:hover {
-  border-color: rgb(26, 77, 46);
-  background-color: rgb(26, 77, 46);
+  border-color: #1a4d2e;
+  background-color: #1a4d2e;
 }
 .highlight-recipe-component .highlight-recipe-card button:active, .highlight-recipe-component .highlight-recipe-card button:focus {
-  background-color: rgb(26, 77, 46);
-  border-color: rgb(26, 77, 46);
+  background-color: #1a4d2e;
+  border-color: #1a4d2e;
   box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.5);
 }
 
@@ -200,7 +200,7 @@
   border-radius: 10px !important;
 }
 .newsletter .card-body {
-  background-color: rgb(26, 77, 46);
+  background-color: #1a4d2e;
   color: #faf3e3;
   border-radius: 10px;
 }
@@ -297,4 +297,28 @@
 }
 .recipe-detail .card-content .card-ingredient .row {
   padding: 10px auto;
+}
+
+.page-not-found .card {
+  border: none;
+}
+.page-not-found .card .card-img {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.page-not-found .card a {
+  border-radius: 20px;
+  background-color: #1a4d2e;
+  border-color: #1a4d2e;
+  color: white;
+  padding: 0.5rem 1.5rem;
+}
+.page-not-found .card a:hover {
+  border-color: #1a4d2e;
+  background-color: #1a4d2e;
+}
+.page-not-found .card a:active, .page-not-found .card a:focus {
+  background-color: #1a4d2e;
+  border-color: #1a4d2e;
+  box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.5);
 }/*# sourceMappingURL=App.css.map */
