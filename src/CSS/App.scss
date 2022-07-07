@@ -339,4 +339,48 @@ $yellow: #ff9f29;
   }
 }
 
+.recipe-detail {
+  .header-thumbnail {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .card-content {
+    border: none;
+
+    .card-info {
+      border-radius: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px;
+      flex-wrap: wrap;
+
+      .box {
+        margin: 10px 30px;
+        min-width: 50px;
+
+        .card-text {
+          font-weight: bold;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    .card-ingredient {
+      max-width: 800px;
+      margin: 0 auto;
+
+      .card-text {
+        text-align: justify;
+      }
+
+      .row {
+        border: 1px solid black;
+        padding: 10px auto;
+      }
+    }
+  }
+}
+
 // @import "~bootstrap/scss/bootstrap";

@@ -261,4 +261,41 @@
 }
 .recipe-per-categories .recipe-card .card-body .mini-text {
   margin: 0;
+}
+
+.recipe-detail .header-thumbnail {
+  height: 300px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.recipe-detail .card-content {
+  border: none;
+}
+.recipe-detail .card-content .card-info {
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.recipe-detail .card-content .card-info .box {
+  margin: 10px 30px;
+  min-width: 50px;
+}
+.recipe-detail .card-content .card-info .box .card-text {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.recipe-detail .card-content .card-ingredient {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.recipe-detail .card-content .card-ingredient .card-text {
+  text-align: justify;
+}
+.recipe-detail .card-content .card-ingredient .row {
+  border: 1px solid black;
+  padding: 10px auto;
 }/*# sourceMappingURL=App.css.map */
