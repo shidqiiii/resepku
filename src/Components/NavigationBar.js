@@ -26,9 +26,9 @@ export default function NavigationBar() {
                                 (<Loading />)
                             }
                         </NavDropdown>
-                        <Nav.Link as={Link} to="/artikel">Artikel</Nav.Link>
-                        <Nav.Link as={Link} to="#">Produk</Nav.Link>
-                        <Nav.Link as={Link} to="#">Favorit</Nav.Link>
+                        <Nav.Link href="/artikel">Artikel</Nav.Link>
+                        <Nav.Link href="/produk">Produk</Nav.Link>
+                        <Nav.Link href="/favorit">Favorit</Nav.Link>
                     </Nav>
                     <Nav className="ms-auto">
                         <Button variant='light' className='mx-1 login'>Masuk</Button>

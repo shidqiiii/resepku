@@ -32,8 +32,20 @@ export default function Home() {
     }, []);
 
     const navigate = useNavigate();
-    const navigateToRecipeDetail = (key) => {
-        navigate(`/resep/${key}`);
+
+    const navigateToRecipeDetail = (key, type) => {
+        switch (type) {
+            case "detail":
+                navigate(`/resep/${key}`);
+                break;
+
+            case "category":
+                navigate(`/kategori/${key}`);
+                break;
+
+            default:
+                break;
+        }
     };
 
 
@@ -69,7 +81,9 @@ export default function Home() {
                                 <Card.Title className='fw-bolder fs-4 my-4'>Berdasarkan Kategori</Card.Title>
                                 <div className="mb-5 categories-card">
                                     {allCategories.map((item) => (
-                                        <Card className="text-center mb-2" key={item.key}>
+                                        <Card className="text-center mb-2"
+                                            key={item.key}
+                                            onClick={() => navigateToRecipeDetail(item.key, "category")}>
                                             <Card.Img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
                                             <Card.ImgOverlay className='d-flex justify-content-center align-items-center'>
                                                 <Card.Title>{item.category}</Card.Title>
@@ -136,7 +150,7 @@ export default function Home() {
                                                 <Card.Title className='fw-bolder fs-5'>{detailRecipe.title}</Card.Title>
                                                 <Card.Text className='my-1'><small>{detailRecipe.author.datePublished} oleh {detailRecipe.author.user}</small></Card.Text>
                                                 <Card.Text>{detailRecipe.desc}</Card.Text>
-                                                <Button onClick={() => navigateToRecipeDetail("resep-roti-goreng-isi-tempe-lada-hitam")}>Cek Detail</Button>
+                                                <Button onClick={() => navigateToRecipeDetail("resep-roti-goreng-isi-tempe-lada-hitam", "detail")}>Cek Detail</Button>
                                             </Card.Body>
                                         </Card>
                                     </Col>

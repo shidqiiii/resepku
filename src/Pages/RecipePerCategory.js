@@ -23,7 +23,7 @@ const RecipePerCategory = () => {
         }
     }
 
-    const [recipePerCategories, setrecipePerCategories] = useState([]);
+    const [recipePerCategories, setrecipePerCategories] = useState(null);
 
     useEffect(() => {
         getRecipePerCategories(key);
@@ -33,7 +33,7 @@ const RecipePerCategory = () => {
     return (
         <div className='recipe-per-categories'>
             {console.log(getCategory())}
-            {getCategory() !== undefined && recipePerCategories !== undefined ?
+            {getCategory() !== undefined && recipePerCategories !== null ?
                 (
                     <>
                         <Card className="bg-dark text-white text-center card-header-recipe-per-category">
