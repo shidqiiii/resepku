@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import { IoCellular, IoFastFood, IoTime } from 'react-icons/io5';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { BaseApi } from '../Api/BaseApi';
 import Loading from '../Components/Loading';
 import { categoriesContext } from '../Context/categoriesContext';
@@ -29,6 +29,12 @@ const RecipePerCategory = () => {
         getRecipePerCategories(key);
     }, []);
 
+    const navigate = useNavigate();
+
+    const navigateToRecipeDetail = (key) => {
+        navigate(`/resep/${key}`);
+    };
+
 
     return (
         <div className='recipe-per-categories'>
@@ -50,7 +56,8 @@ const RecipePerCategory = () => {
                             <Row xs={1} sm={2} lg={3} className="g-5 mb-5">
                                 {recipePerCategories.map((item) => (
                                     <Col key={item.key}>
-                                        <Card className='recipe-card'>
+                                        <Card className='recipe-card'
+                                            onClick={() => navigateToRecipeDetail(item.key)}>
                                             <Card.Img variant="top" src={item.thumb} />
                                             <Card.Body>
                                                 <Card.Text className='mini-text'>
