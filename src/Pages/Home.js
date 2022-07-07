@@ -104,7 +104,7 @@ export default function Home() {
                                     {higlightRecipe.map((item) => (
                                         <Col key={item.key}>
                                             <Card className='new-recipe-card text-center'
-                                                onClick={() => navigateToRecipeDetail(item.key)}>
+                                                onClick={() => navigateToRecipeDetail(item.key, "detail")}>
                                                 <Card.Img variant="top" src={item.thumb} />
                                                 <Card.Body>
                                                     <Card.Title className='fw-bold'>{item.title}</Card.Title>
