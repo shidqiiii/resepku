@@ -43,7 +43,7 @@ $yellow: #ff9f29;
   border: none !important;
 
   .card-img {
-    height: 600px;
+    max-height: 600px;
     object-fit: cover;
   }
 

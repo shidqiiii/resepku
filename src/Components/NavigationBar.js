@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { Navbar, Container, Nav, Button, NavDropdown } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import { categoriesContext } from '../Context/categoriesContext';
 import Loading from './Loading';
 
