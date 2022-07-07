@@ -242,6 +242,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.recipe-per-categories .recipe-card .card-body .card-text {
-  text-align: center;
+.recipe-per-categories .recipe-card .card-body .mini-text {
+  margin: 0;
 }/*# sourceMappingURL=App.css.map */

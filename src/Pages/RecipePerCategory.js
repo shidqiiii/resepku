@@ -10,10 +10,11 @@ const RecipePerCategory = () => {
     const { key } = useParams();
     const allCategories = useContext(categoriesContext);
 
-    const getCategory = () =>
-        allCategories.find(item => (
+    const getCategory = () => {
+        return allCategories.find(item =>
             item.key === key
-        ))
+        )
+    }
 
     const getRecipePerCategories = async (key) => {
         const data = await BaseApi.recipesByCategory(key);
@@ -31,7 +32,7 @@ const RecipePerCategory = () => {
 
     return (
         <div className='recipe-per-categories'>
-            {/* {console.log(getCategory())} */}
+            {console.log(getCategory())}
             {getCategory() !== undefined && recipePerCategories !== undefined ?
                 (
                     <>
@@ -52,10 +53,10 @@ const RecipePerCategory = () => {
                                         <Card className='recipe-card'>
                                             <Card.Img variant="top" src={item.thumb} />
                                             <Card.Body>
-                                                <Card.Text>
+                                                <Card.Text className='mini-text'>
                                                     <IoTime /> {item.times} <IoFastFood /> {item.portion} <IoCellular /> {item.dificulty}
                                                 </Card.Text>
-                                                <Card.Text>{item.title}</Card.Text>
+                                                <Card.Title className='my-2 fw-bold'>{item.title}</Card.Title>
                                             </Card.Body>
                                         </Card>
                                     </Col>
