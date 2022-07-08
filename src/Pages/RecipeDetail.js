@@ -3,7 +3,6 @@ import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { BaseApi } from '../Api/BaseApi';
 import ContentCard from '../Components/Detail Page/ContentCard';
-import InfoCard from '../Components/Detail Page/InfoCard';
 import Loading from '../Components/Loading';
 
 export default function RecipeDetail() {
