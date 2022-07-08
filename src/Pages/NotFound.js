@@ -5,11 +5,11 @@ export default function NotFound() {
     return (
         <Container className='page-not-found text-center my-5'>
             <Card>
-                <Card.Img src="./images/notfound.png" alt="Card image" />
+                <Card.Img src="./images/UnderConst.png" alt="Card image" />
                 <Card.Body>
                     <Card.Title className='fw-bold fs-1'>Ooops...</Card.Title>
                     <Card.Text>
-                        Halaman belum tersedia untuk saat ini. Klik tombol dibawah untuk melanjutkan perjalanan kembali.
+                        Mohon Maaf, Halaman ini sedang dalam perbaikan. Klik tombol dibawah untuk melanjutkan Perjalanan.
                     </Card.Text>
                     <a href='/' className='btn btn-primary'>Halaman Utama</a>
                 </Card.Body>

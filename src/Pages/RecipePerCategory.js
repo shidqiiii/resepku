@@ -7,7 +7,7 @@ import RecipeCategoryCard from '../Components/Home Page/RecipeCategoryCard';
 import Loading from '../Components/Loading';
 import { categoriesContext } from '../Context/categoriesContext';
 
-const RecipePerCategory = () => {
+export default function RecipePerCategory() {
     const { key } = useParams();
     const allCategories = useContext(categoriesContext);
 
@@ -64,5 +64,3 @@ const RecipePerCategory = () => {
         </div>
     );
 }
-
-export default RecipePerCategory;

@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 import InfoCard from './InfoCard';
 import IngredientCard from './IngredientCard';
 
-const ContentCard = (props) => {
+export default function ContentCard(props) {
     return (
         <div>
             <Card className='text-center card-content my-5 justify-content-center'>
@@ -17,5 +17,3 @@ const ContentCard = (props) => {
         </div>
     );
 }
-
-export default ContentCard;

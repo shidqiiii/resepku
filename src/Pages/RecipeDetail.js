@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { BaseApi } from '../Api/BaseApi';
+import ContentCard from '../Components/Detail Page/ContentCard';
 import InfoCard from '../Components/Detail Page/InfoCard';
 import Loading from '../Components/Loading';
 
@@ -28,7 +29,7 @@ export default function RecipeDetail() {
             return (
                 <Container className='mt-5'>
                     <img className='header-thumbnail' src={recipeDetail.thumb} alt="Logo" />
-                    <InfoCard recipeDetail={recipeDetail} />
+                    <ContentCard recipeDetail={recipeDetail} />
                 </Container>
             )
         }
