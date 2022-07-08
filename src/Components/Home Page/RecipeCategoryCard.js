@@ -11,7 +11,7 @@ export default function RecipeCategoryCard(props) {
             </Card>
 
             <Row xs={1} sm={2} md={4} className="g-4 mb-5">
-                {props.higlightRecipe.map((item) => (
+                {props.recipe.map((item) => (
                     <Col key={item.key}>
                         <Card className='new-recipe-card text-center'
                             onClick={() => props.navigateToRecipeDetail(item.key, "detail")}>

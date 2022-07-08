@@ -4,11 +4,11 @@ import { BaseApi } from '../Api/BaseApi';
 import { categoriesContext } from '../Context/categoriesContext';
 import Loading from '../Components/Loading';
 import { useNavigate } from 'react-router-dom';
-import Header from '../Components/Home/Header';
-import CategoriesCard from '../Components/Home/CategoryCard';
-import Newsletter from '../Components/Home/Newsletter';
-import RecipeCategoryCard from '../Components/Home/RecipeCategoryCard';
-import RecipeHighlightCard from '../Components/Home/RecipeHighlightCard';
+import HeaderCard from '../Components/Home Page/HeaderCard';
+import CategoriesCard from '../Components/Home Page/CategoryCard';
+import NewsletterCard from '../Components/Home Page/NewsletterCard';
+import RecipeCategoryCard from '../Components/Home Page/RecipeCategoryCard';
+import RecipeHighlightCard from '../Components/Home Page/RecipeHighlightCard';
 
 export default function Home() {
     const allCategories = useContext(categoriesContext);
@@ -55,28 +55,30 @@ export default function Home() {
     //Loading Data
     const LoadingData = () => {
         if (allCategories.length !== 0 && higlightRecipe.length !== 0 && detailRecipe.length !== 0) {
-            return (<>
-                <Header />
+            return (
+                <>
+                    <HeaderCard />
 
-                <Container className='mt-5'>
-                    {/* All Categories */}
-                    <CategoriesCard
-                        navigateToRecipeDetail={navigateToRecipeDetail} />
+                    <Container className='mt-5'>
+                        {/* All Categories */}
+                        <CategoriesCard
+                            navigateToRecipeDetail={navigateToRecipeDetail} />
 
-                    {/* New Recipes */}
-                    <RecipeCategoryCard
-                        navigateToRecipeDetail={navigateToRecipeDetail}
-                        higlightRecipe={higlightRecipe} />
+                        {/* New Recipes */}
+                        <RecipeCategoryCard
+                            navigateToRecipeDetail={navigateToRecipeDetail}
+                            recipe={higlightRecipe} />
 
-                    {/* Recipe Highlight */}
-                    <RecipeHighlightCard
-                        navigateToRecipeDetail={navigateToRecipeDetail}
-                        detailRecipe={detailRecipe} />
+                        {/* Recipe Highlight */}
+                        <RecipeHighlightCard
+                            navigateToRecipeDetail={navigateToRecipeDetail}
+                            detailRecipe={detailRecipe} />
 
-                    {/* newsletter */}
-                    <Newsletter />
-                </Container>
-            </>)
+                        {/* newsletter */}
+                        <NewsletterCard />
+                    </Container>
+                </>
+            )
         }
         return (<Loading />)
     }

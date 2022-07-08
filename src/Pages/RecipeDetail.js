@@ -22,7 +22,7 @@ export default function RecipeDetail() {
 
     return (
         <div className='recipe-detail'>
-            {console.log(recipeDetail)}
+            {/* {console.log(recipeDetail)} */}
 
 
             {recipeDetail !== null ?
@@ -51,7 +51,7 @@ export default function RecipeDetail() {
                                     <Card.Title className='my-4 fw-bold'>Bahan yang Diperlukan</Card.Title>
                                     <Row xs={1} md={2} className="g-2 mx-5">
                                         {recipeDetail.ingredient.map(item => (
-                                            <Col>
+                                            <Col key={item}>
                                                 <Card.Text>{item}</Card.Text>
                                             </Col>
                                         ))}
@@ -60,7 +60,7 @@ export default function RecipeDetail() {
                                 <div className='mx-5'>
                                     <Card.Title className='my-4 fw-bold'>Cara Memasak</Card.Title>
                                     {recipeDetail.step.map(item => (
-                                        <Card.Text>{item}</Card.Text>
+                                        <Card.Text key={item}>{item}</Card.Text>
                                     ))}
                                 </div>
                             </div>
