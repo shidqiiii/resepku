@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { Container } from 'react-bootstrap';
+import { Button, Card, Container } from 'react-bootstrap';
 import { BaseApi } from '../Api/BaseApi';
 import { categoriesContext } from '../Context/categoriesContext';
 import Loading from '../Components/Loading';
@@ -65,6 +65,10 @@ export default function Home() {
                             navigateToRecipeDetail={navigateToRecipeDetail} />
 
                         {/* New Recipes */}
+                        <Card className='categories-title flex-row justify-content-between align-items-center my-4'>
+                            <Card.Title className='fw-bolder fs-4'>Cobain Resep Terbaru</Card.Title>
+                            <Button>Lihat Semua</Button>
+                        </Card>
                         <RecipeCategoryCard
                             navigateToRecipeDetail={navigateToRecipeDetail}
                             recipe={higlightRecipe} />

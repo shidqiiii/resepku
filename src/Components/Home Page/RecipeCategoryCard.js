@@ -1,15 +1,10 @@
 import React from 'react'
-import { Button, Card, Col, Row } from 'react-bootstrap'
+import { Card, Col, Row } from 'react-bootstrap'
 import { IoCellular, IoFastFood, IoTime } from 'react-icons/io5'
 
 export default function RecipeCategoryCard(props) {
     return (
         <div className="new-recipe-component">
-            <Card className='categories-title flex-row justify-content-between align-items-center my-4'>
-                <Card.Title className='fw-bolder fs-4'>Cobain Resep Terbaru</Card.Title>
-                <Button>Lihat Semua</Button>
-            </Card>
-
             <Row xs={1} sm={2} md={4} className="g-4 mb-5">
                 {props.recipe.map((item) => (
                     <Col key={item.key}>
