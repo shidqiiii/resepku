@@ -14,7 +14,7 @@ const RecipePerCategory = () => {
     const getCategory = () => {
         return allCategories.find(item =>
             item.key === key
-        )
+        );
     }
 
     //Hit End Point (API)
@@ -29,7 +29,7 @@ const RecipePerCategory = () => {
     }, [key]);
 
     //Passing Data to State
-    const [recipePerCategories, setrecipePerCategories] = useState(null);
+    const [recipePerCategories, setrecipePerCategories] = useState([]);
 
     // Navigate Route
     const navigate = useNavigate();
@@ -39,7 +39,7 @@ const RecipePerCategory = () => {
 
     //Loading Data
     const LoadingData = () => {
-        if (getCategory() !== undefined && recipePerCategories !== null) {
+        if (getCategory() !== undefined && recipePerCategories.length !== 0) {
             return (
                 <>
                     <HeaderCard
