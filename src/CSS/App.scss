@@ -308,3 +308,22 @@ nav {
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .header {
+    margin-top: 5rem;
+
+    .card-img {
+      // display: none;
+      visibility: hidden;
+    }
+  }
+
+  .new-recipe-component {
+    .categories-title {
+      button {
+        padding: 0.375rem 0.75rem;
+      }
+    }
+  }
+}
