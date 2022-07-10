@@ -4,11 +4,11 @@ import { IoCellular, IoFastFood, IoTime } from 'react-icons/io5'
 
 export default function RecipeCategoryCard(props) {
     return (
-        <div className="new-recipe-component">
+        <div className="recipe-component">
             <Row xs={1} sm={2} md={4} className="g-4 mb-5">
                 {props.recipe.map((item) => (
                     <Col key={item.key}>
-                        <Card className='new-recipe-card text-center'
+                        <Card className='recipe-card text-center'
                             onClick={() => props.navigateToRecipeDetail(item.key, "detail")}>
                             <Card.Img variant="top" src={item.thumb} />
                             <Card.Body>

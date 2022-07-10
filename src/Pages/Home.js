@@ -65,13 +65,15 @@ export default function Home() {
                             navigateToRecipeDetail={navigateToRecipeDetail} />
 
                         {/* New Recipes */}
-                        <Card className='categories-title flex-row justify-content-between align-items-center my-4'>
-                            <Card.Title className='fw-bolder fs-4'>Cobain Resep Terbaru</Card.Title>
-                            <Button>Lihat Semua</Button>
-                        </Card>
-                        <RecipeCategoryCard
-                            navigateToRecipeDetail={navigateToRecipeDetail}
-                            recipe={higlightRecipe} />
+                        <div className="new-recipe-component">
+                            <Card className='categories-title flex-row justify-content-between align-items-center my-4'>
+                                <Card.Title className='fw-bolder fs-4'>Cobain Resep Terbaru</Card.Title>
+                                <Button>Lihat Semua</Button>
+                            </Card>
+                            <RecipeCategoryCard
+                                navigateToRecipeDetail={navigateToRecipeDetail}
+                                recipe={higlightRecipe} />
+                        </div>
 
                         {/* Recipe Highlight */}
                         <RecipeHighlightCard

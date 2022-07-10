@@ -1,9 +1,9 @@
 import React from 'react'
-import { Card, Container } from 'react-bootstrap'
+import { Button, Card, Container } from 'react-bootstrap'
 
 export default function NotFound() {
     return (
-        <Container className='page-not-found text-center my-5'>
+        <Container className='page-under-construction text-center my-5'>
             <Card>
                 <Card.Img src="./images/UnderConst.png" alt="Card image" />
                 <Card.Body>
@@ -11,7 +11,7 @@ export default function NotFound() {
                     <Card.Text>
                         Mohon Maaf, Halaman ini sedang dalam perbaikan. Klik tombol dibawah untuk melanjutkan Perjalanan.
                     </Card.Text>
-                    <a href='/' className='btn btn-primary'>Halaman Utama</a>
+                    <a href="/" className='btn'>Halaman Utama</a>
                 </Card.Body>
             </Card>
         </Container>

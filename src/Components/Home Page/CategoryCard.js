@@ -9,7 +9,7 @@ export default function CategoriesCard(props) {
         <div className="categories-component">
             {/* {console.log(allCategories)} */}
             <Card.Title className='fw-bolder fs-4 my-4'>Berdasarkan Kategori</Card.Title>
-            <div className="mb-5 categories-card">
+            <div className="mb-5 categories-card d-flex">
                 {allCategories.map((item) => (
                     <Card className="text-center mb-2"
                         key={item.key}
