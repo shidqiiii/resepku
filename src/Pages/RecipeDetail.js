@@ -17,7 +17,7 @@ export default function RecipeDetail() {
     }
     useEffect(() => {
         getRecipeDetail(key);
-    }, []);
+    }, [key]);
 
     //Passing Data to State
     const [recipeDetail, setRecipeDetail] = useState(null);

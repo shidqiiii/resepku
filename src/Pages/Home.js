@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { Button, Card, Container } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 import { BaseApi } from '../Api/BaseApi';
 import { categoriesContext } from '../Context/categoriesContext';
 import Loading from '../Components/Loading';
@@ -50,6 +50,7 @@ export default function Home() {
             default:
                 break;
         }
+        window.location.reload();
     };
 
     //Loading Data

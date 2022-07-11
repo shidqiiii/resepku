@@ -35,6 +35,7 @@ export default function RecipePerCategory() {
     const navigate = useNavigate();
     const navigateToRecipeDetail = (key) => {
         navigate(`/resep/${key}`);
+        window.location.reload();
     };
 
     //Loading Data
