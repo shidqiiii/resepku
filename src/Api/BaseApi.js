@@ -6,11 +6,7 @@ class BaseApi {
     static async higlightRecipe() {
         let result = null;
 
-        await axios.get(BaseApi.baseUrl + 'api/recipes-length/?limit=8', {
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-            },
-        })
+        await axios.get(BaseApi.baseUrl + 'api/recipes-length/?limit=8')
             .then((response) => {
                 // console.log(response.data);
                 result = response.data
