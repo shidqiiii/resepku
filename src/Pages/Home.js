@@ -47,18 +47,36 @@ export default function Home() {
                 navigate(`/kategori/${key}`);
                 break;
 
+            case "result search":
+                navigate(`/pencarian/${key}`);
+                break
+
             default:
                 break;
         }
         window.location.reload();
     };
 
+    // Search Recipe
+    const handleChange = (e) => {
+        setData(e.target.value);
+    }
+    const handleSubmit = (e) => {
+        // e.preventDefault();
+        // console.log(data);
+        navigateToRecipeDetail(data, "result search")
+    }
+
+    const [data, setData] = useState(null);
+
     //Loading Data
     const LoadingData = () => {
         if (allCategories.length !== 0 && higlightRecipe.length !== 0 && detailRecipe.length !== 0) {
             return (
                 <>
-                    <HeaderCard />
+                    <HeaderCard
+                        handleChange={handleChange}
+                        handleSubmit={handleSubmit} />
 
                     <Container className='mt-5'>
                         {/* All Categories */}

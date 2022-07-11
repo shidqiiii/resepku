@@ -78,6 +78,21 @@ class BaseApi {
         return result
     }
 
+    static async recipeFinder(key) {
+        let result = null;
+
+        await axios.get(BaseApi.baseUrl + `/api/search/?q=${key}`)
+            .then((response) => {
+                // console.log(response.data);
+                result = response.data
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+        // console.log(result);
+        return result
+    }
+
 }
 
 export { BaseApi }

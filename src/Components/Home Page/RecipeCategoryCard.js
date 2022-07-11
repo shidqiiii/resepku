@@ -30,10 +30,10 @@ export default function RecipeCategoryCard(props) {
                                         <Card.Text>{item.times}</Card.Text>
                                     </Col>
                                     <Col>
-                                        <Card.Text>{item.portion}</Card.Text>
+                                        <Card.Text>{item.portion || item.serving}</Card.Text>
                                     </Col>
                                     <Col>
-                                        <Card.Text>{item.dificulty}</Card.Text>
+                                        <Card.Text>{item.dificulty || item.difficulty}</Card.Text>
                                     </Col>
                                 </Row>
                             </Card.Body>
