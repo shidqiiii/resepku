@@ -1,12 +1,12 @@
 import axios from "axios";
 
 class BaseApi {
-    static baseUrl = "https://masak-apa.tomorisakura.vercel.app/";
+    static baseUrl = "https://masak-apa-tomorisakura.vercel.app";
 
     static async higlightRecipe() {
         let result = null;
 
-        await axios.get(BaseApi.baseUrl + 'api/recipes-length/?limit=8')
+        await axios.get(BaseApi.baseUrl + '/api/recipes-length/?limit=8')
             .then((response) => {
                 // console.log(response.data);
                 result = response.data
@@ -21,7 +21,7 @@ class BaseApi {
     static async allCategoriesRecipe() {
         let result = null;
 
-        await axios.get(BaseApi.baseUrl + 'api/category/recipes')
+        await axios.get(BaseApi.baseUrl + '/api/category/recipes')
             .then((response) => {
                 // console.log(response.data);
                 result = response.data
@@ -36,7 +36,7 @@ class BaseApi {
     static async detailRecipe(key) {
         let result = null;
 
-        await axios.get(BaseApi.baseUrl + `api/recipe/${key}`)
+        await axios.get(BaseApi.baseUrl + `/api/recipe/${key}`)
             .then((response) => {
                 // console.log(response.data);
                 result = response.data
@@ -51,7 +51,7 @@ class BaseApi {
     static async recipesByCategory(key) {
         let result = null;
 
-        await axios.get(BaseApi.baseUrl + `api/category/recipes/${key}`)
+        await axios.get(BaseApi.baseUrl + `/api/category/recipes/${key}`)
             .then((response) => {
                 // console.log(response.data);
                 result = response.data
@@ -66,7 +66,7 @@ class BaseApi {
     static async recipeDetail(key) {
         let result = null;
 
-        await axios.get(BaseApi.baseUrl + `api/recipe/${key}`)
+        await axios.get(BaseApi.baseUrl + `/api/recipe/${key}`)
             .then((response) => {
                 // console.log(response.data);
                 result = response.data
